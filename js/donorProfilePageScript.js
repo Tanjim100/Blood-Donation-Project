@@ -59,3 +59,60 @@ document.addEventListener("DOMContentLoaded", () => {
     percentageText.textContent = `${responseRatio}%`;
     responseRatioText.textContent = `${responseRatio}%`;
 });
+
+
+// Array of image URLs
+const images = [
+    './images/ProfilePage/medical-report.jpg',
+    './images/ProfilePage/medical-report.jpg',
+    './images/ProfilePage/medical-report.jpg',
+    './images/ProfilePage/medical-report.jpg',
+];
+
+// Slider container
+const slider = document.getElementById('slider');
+
+// Initialize the slider with images
+images.forEach(imageUrl => {
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = "Slider Image";
+    img.classList = "w-full h-auto object-cover flex-shrink-0";
+    slider.appendChild(img);
+});
+
+// Slider control
+let currentIndex = 0;
+
+const updateSlider = () => {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+};
+
+// Previous button
+document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    updateSlider();
+});
+
+// Next button
+document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    updateSlider();
+});
+
+
+
+// JavaScript for toggling mobile menu
+
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.remove('hidden'); // Show menu
+});
+
+closeBtn.addEventListener('click', () => {
+mobileMenu.classList.add('hidden'); // Hide menu
+});
+

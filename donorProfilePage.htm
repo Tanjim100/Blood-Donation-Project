@@ -12,7 +12,7 @@
 <body class="bg-gray-100">
 
   <!-- Header -->
-  <header class="bg-white shadow-md">
+  <header class=" relative bg-white shadow-md z-10">
     <div class="flex items-center justify-between p-4">
       <a href="homePage.htm" class="flex items-center gap-2">
         <i class="fa-solid fa-hand-holding-droplet text-red-500 text-2xl"></i>
@@ -38,11 +38,11 @@
         <a href="loginPage.htm" class="text-red-500 hover:text-gray-200">Login</a>
         <a href="signUpPage.htm" class="text-red-500 hover:text-gray-200">Sign Up</a> -->
 
-        <a href="#" class="text-red-500 hover:text-2xl">Edit_Profile</a>
+        <a href="#" class="text-red-500 hover:text-xl">Edit_Profile</a>
       </nav>
 
       <!-- Links for Mobile -->
-      <nav id="mobile-menu" class="fixed top-0 right-0 w-3/4 h-3/4 bg-red-500 shadow-lg p-6 space-y-6 hidden md:hidden">
+      <nav id="mobile-menu" class="fixed top-0 right-0 w-3/4 h-3/4 bg-red-500 shadow-lg p-6 space-y-6 hidden md:hidden z-50">
   <!-- Close button for mobile menu -->
   <button id="close-btn" class="absolute top-4 right-4 text-white focus:outline-none">
     <!-- Close icon -->
@@ -52,11 +52,12 @@
   </button>
 
   <!-- Menu links with rounded white background on hover -->
-  <a href="#" class="block text-white hover:text-red-500 hover:bg-white hover:rounded-lg px-4 py-2">About Us</a>
-  <a href="#" class="block text-white hover:text-red-500 hover:bg-white hover:rounded-lg px-4 py-2">Why Donate?</a>
-  <a href="#" class="block text-white hover:text-red-500 hover:bg-white hover:rounded-lg px-4 py-2">Contact Us</a>
-  <a href="loginPage.htm" class="block text-white hover:text-red-500 hover:bg-white hover:rounded-lg px-4 py-2">Login</a>
-  <a href="signUpPage.htm" class="block text-white hover:text-red-500 hover:bg-white hover:rounded-lg px-4 py-2">Sign Up</a>
+  <a href="#" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Edit_Profile</a>
+  <a href="#" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Donate</a>
+  <a href="#" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Request</a>
+  <a href="#" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Contact Us</a>
+  <a href="loginPage.htm" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Login</a>
+  <a href="signUpPage.htm" class="block text-white hover:text-red-500 hover:bg-white rounded-lg px-4 py-2">Sign Up</a>
 </nav>
 
     </div>
@@ -151,6 +152,35 @@
       </div>
     </section>
 
+
+    <!-- Report  -->
+    <section class="relative flex flex-col items-center justify-start bg-white p-6 mb-6 rounded">
+        <!-- Header -->
+        <h3 class="text-xl font-semibold  absolute top-0 left-2 p-4">Report</h3>
+    
+        <!-- Slider Container -->
+        <div class="relative w-full max-w-lg mx-auto mt-16 overflow-hidden bg-white shadow-lg rounded-lg">
+          <!-- Image Slider -->
+          <div id="slider" class="flex transition-transform duration-500">
+            <!-- Images will be dynamically inserted here -->
+          </div>
+    
+          <!-- Left Button -->
+          <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-800 bg-transparent p-2 rounded-full hover:bg-gray-800 hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+    
+          <!-- Right Button -->
+          <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-800 bg-transparent p-2 rounded-full hover:bg-gray-800 hover:text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
     <!-- Contact Information -->
     <section class="bg-white shadow rounded p-6">
       <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
@@ -161,6 +191,8 @@
         Request Contact
       </button>
     </section>
+
+    
 
   </main>
 
